@@ -4,18 +4,19 @@
 #Check from 3 Number which are palindrom number or not
 
 #3 digit ranoms number
-number1=$(((RANDOM%999) + 1))
-number2=$(((RANDOM%999) + 1))
-number3=$(((RANDOM%999) + 1))
+number1=$(((RANDOM%900) + 100))
+number2=$(((RANDOM%900) + 100))
+number3=$(((RANDOM%900) + 100))
 
-rem=0
-rev=""
 
 arr=($number1 $number2 $number3)
 
 for (( i=0; i<${#arr[@]}; i++))
 do
 	temp=${arr[$i]}
+	rem=0
+	rev=""
+
 	while [ ${arr[$i]} -gt 0 ]
 	do
 	    # Get Remainder
